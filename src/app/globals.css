@@ -1,26 +1,27 @@
+@import url('https://api.fontshare.com/v2/css?f[]=erode@200,300,400,500,600,700&f[]=recia@300,400,500&display=swap');
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: #0f0f0f;
+  --foreground: #ffffff;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+}
+
+@keyframes carpet-roll {
+  0% {
+    clip-path: inset(0 100% 0 0);
+    transform: translateX(-14px);
+  }
+  100% {
+    clip-path: inset(0 0% 0 0);
+    transform: translateX(0);
+  }
+}
+
+.carpet-roll {
+  animation: carpet-roll 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
