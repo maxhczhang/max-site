@@ -13,8 +13,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Portfolio",
+  title: "Max Zhang",
   description: "Personal portfolio",
+  icons: {
+    icon: "/favicon.png",
+  },
 };
 
 export default function RootLayout({
