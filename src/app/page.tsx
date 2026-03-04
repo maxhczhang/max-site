@@ -2,11 +2,7 @@ import About from "./components/About";
 import Projects from "./components/Projects";
 import ShootingStars from "./components/ShootingStars";
 import ScrollArrow from "./components/ScrollArrow";
-
-const lines = [
-  { text: "Max Zhang", font: "'Erode', serif", weight: 600, size: "text-5xl md:text-6xl" },
-  { text: "Computer Science @ UC Irvine", font: "'Recia', serif", weight: 400, size: "text-2xl md:text-3xl" },
-];
+import TypingAnimation from "./components/TypingAnimation";
 
 const navLinks = [
   { label: "Home", href: "#" },
@@ -38,21 +34,15 @@ export default function Home() {
       <main className="hero min-h-screen flex items-center justify-center px-6">
         <ShootingStars />
         <div className="relative z-10">
-          {lines.map((line, i) => (
-            <div
-              key={i}
-              className="carpet-roll overflow-hidden"
-              style={{
-                animationDelay: `${i * 110}ms`,
-                fontFamily: line.font,
-                fontWeight: line.weight,
-              }}
-            >
-              <p className={`text-white ${line.size} leading-snug tracking-tight text-center`}>
-                {line.text}
-              </p>
-            </div>
-          ))}
+          <div className="carpet-roll overflow-hidden" style={{ fontFamily: "'Erode', serif", fontWeight: 600 }}>
+            <p className="text-white text-5xl md:text-6xl leading-snug tracking-tight text-center">
+              Max Zhang
+            </p>
+          </div>
+          <p className="text-white text-2xl md:text-3xl leading-snug tracking-tight text-center"
+            style={{ fontFamily: "'Recia', serif", fontWeight: 400 }}>
+            <TypingAnimation text="Computer Science @ UC Irvine" delay={500} duration={45} />
+          </p>
         </div>
       </main>
 

@@ -30,6 +30,18 @@ body {
   animation: carpet-roll 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
+.typing-cursor {
+  display: inline-block;
+  margin-left: 1px;
+  animation: blink 0.6s step-end infinite;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
 /* ── Hero background ── */
 
 .hero {
